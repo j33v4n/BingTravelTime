@@ -5,7 +5,7 @@ import time
 import schedule
 
 # Your BING API key
-KEY = 'INSERT KEY HERE'
+KEY = 'Av7nteTPvKzF-dDLkhichCf_EBK3NF2mvqCG-XhzlBxkubfGgfc7oRjQK3KorTne'
 
 # Output File
 output_file = 'BingAPI_Corridors.txt'
@@ -89,8 +89,8 @@ def bing_api_travelDuration(routes, output_file):
 					
 					# If failure, print time of error, continue
 					except (urllib2.HTTPError, urllib2.URLError) as e:
-						print e.code
-						print "A-->B, Error at " + time.strftime('%A %X %x')
+						print(e.code)
+						print("A-->B, Error at " + time.strftime('%A %X %x'))
 					
 				# Dump output as json to output_file
 				json.dump(bing_result, f)
